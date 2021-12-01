@@ -1,0 +1,12 @@
+<div class="general">
+  <div class="login-page">
+    <div class="form">
+      <form class="login-form" novalidate [formGroup]="formUser" (ngSubmit)="userLogin()">
+        <input type="text" placeholder="correo" formControlName="correo" />
+        <input type="password" placeholder="Password" formControlName="password" />
+        <button>login</button>
+        <p class="message">¿No estas registrado? <a [routerLink]="['/registro']">Crear una nueva cuenta</a></p>
+      </form>
+    </div>
+  </div>
+</div>

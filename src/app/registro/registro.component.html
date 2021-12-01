@@ -1,0 +1,66 @@
+<div class="general">
+  <div class="container  ">
+    <div class="row ">
+
+      <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-primary ">
+          <div class="panel-heading titulo">Registro</div>
+          <div class="panel-body">
+            <form novalidate [formGroup]="formUser" (ngSubmit)="addUserBBDD()">
+              <div class="form-group">
+                <label for="fname">Nombre</label>
+                <input type="text" id="nombre" class="form-control" name="fnickname" placeholder="Ejemplo::Pepe"
+                  formControlName="nombre">
+              </div>
+
+              <div class="form-group">
+                <label for="genero">Genero</label>
+                <select id="genero" class="form-control" name="genero" formControlName="genero">
+                  <option value="Desconocido">Sin especificar</option>
+                  <option value="hombre">Hombre</option>
+                  <option value="mujer">Mujer</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="pais">País </label>
+                <input type="text" id="pais" class="form-control" name="pais" placeholder="Ejemplo::España"
+                  formControlName="pais">
+              </div>
+              <div class="form-group">
+                <label for="ciudad">Ciudad </label>
+                <input type="text" id="ciudad" class="form-control" name="ciudad" placeholder="Ejemplo: Barcelona"
+                  formControlName="ciudad">
+              </div>
+              <div class="form-group">
+                <label for="correo">Direccion de Email </label>
+                <input type="text" id="correo" class="form-control" name="email"
+                  placeholder="Ejemplo: john.doe@gmail.com" formControlName="correo">
+              </div>
+              <div class="form-group">
+                <label for="fechaNacimiento">Fecha de nacimiento </label>
+                <br>
+                <input type="date" name="fechaNacimiento" step="1" min="1950-01-01" max="2020-12-31" value="2020-01-01"
+                  formControlName="fechaNacimiento">
+              </div>
+              <div class="form-group">
+                <label for="Contraseña">Contraseña</label>
+                <input type="password" id="password" class="form-control" name="password"
+                  placeholder="Debe contener minimo 8 caracteres" formControlName="password">
+              </div>
+              <div class="form-group">
+                <label for="verifypass">Repetir Contraseña</label>
+                <input type="password" id="confirmpass" class="form-control" name="verifypass"
+                  placeholder="Debe contener minimo 8 caracteres" formControlName="password">
+              </div>
+              <div class="form-group text-center">
+                <input type="submit" class="button btn btn-primary btn-lg" value="Registrate">
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
